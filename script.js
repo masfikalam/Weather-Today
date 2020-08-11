@@ -13,6 +13,7 @@ const pressure = document.getElementById('pres');
 search.addEventListener('click', (event) => {
     event.preventDefault();
 
+    // API
     const apiKey = 'c6f70638649b16325e95e3bd13a22713';
     const input = document.getElementById('city');
 
@@ -20,15 +21,11 @@ search.addEventListener('click', (event) => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${apiKey}&units=metric`)
         .then(response => response.json())
         .then(data => displayData(data))
-        // .catch(error => {
-        //     confirm(`Sorry, couldn't connect`);
-        //     input.value = ""
-        // });
 
     // displaying data
     function displayData(data) {
         if (data.name == undefined) {
-            confirm(`Sorry, couldn't connect`)
+            alert(`Sorry, couldn't connect`)
         } else {
             city.innerText = data.name;
             type.innerText = data.weather[0].main;
