@@ -5,41 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Today's Weather</title>
+
+    <!-- styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 
 <body>
     <h1 class="heading">Welcome to Today's Weather Forcast</h1>
     <main>
+
+        <!-- search  -->
         <form class="search-area">
             <input type="text" id="city" placeholder="Search City">
             <button type="submit" id="search"><i class="fas fa-search"></i></button>
         </form>
+
+        <!-- result -->
         <div class="result-area">
-            <h1 id="name">Chittagong</h1>
+            <h1 id="name">City</h1>
             <div class="flexed column">
-                <img src="img/04n.png" id="icon">
-                <h1 id="type">Cloud</h1>
+                <img src="img/icon.png" width="80px" id="icon">
+                <h1 id="type">Situation</h1>
             </div>
             <div class="flexed">
                 <h1>Temperature</h1>
-                <h1><span id="temp">29</span>° C</h1>
+                <h1><span id="temp"></span>° C</h1>
             </div>
             <div class="flexed">
                 <h1>Humidity</h1>
-                <h1><span id="hum">90</span> %</h1>
+                <h1><span id="hum"></span> %</h1>
             </div>
             <div class="flexed">
                 <h1>Pressure</h1>
-                <h1><span id="pres">1001</span> hPa</h1>
+                <h1><span id="pres"></span> hPa</h1>
             </div>
         </div>
     </main>
+
+    <!-- footer -->
     <footer>
         <h3>Made by <a href="https://fb.com/masfik.alam" target="_blank">Masfikul Alam</a></h3>
     </footer>
 
+    <!-- scripts -->
     <script src="script.js"></script>
 </body>
 
